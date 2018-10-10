@@ -1,0 +1,6 @@
+#show HDDs
+lsscsi
+zpool create -m none -o ashift=12 naspool raidz /dev/sda /dev/sdb /dev/sdh /dev/sdk
+zfs set atime=off naspool
+zfs create naspool/data
+zfs set mountpoint=/mnt/data naspool/data
