@@ -28,3 +28,13 @@ setterm -blank 0
 cat /sys/module/kernel/parameters/consoleblank
 
 
+In order to make text boot the default under systemd (regardless of which distro, really):
+
+systemctl set-default multi-user.target
+
+
+To change back to booting to the GUI,
+
+systemctl set-default graphical.target
+
+
