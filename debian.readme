@@ -1,3 +1,5 @@
+###########################################
+
 #show HDDs
 lsscsi
 zpool create -m none -o ashift=12 naspool raidz /dev/sda /dev/sdb /dev/sdh /dev/sdk
@@ -8,10 +10,11 @@ zfs set mountpoint=/mnt/data naspool/data
 #after OS change:
 sudo zpool import naspool
 
+###########################################
 
 sudo uvcdynctrl -i /usr/share/uvcdynctrl/data/046d/logitech.xml
 
-
+###########################################
 
 # LED off
 
@@ -27,11 +30,13 @@ Disable terminal blank:
 setterm -blank 0
 cat /sys/module/kernel/parameters/consoleblank
 
+###########################################
 
 In order to make text boot the default under systemd (regardless of which distro, really):
 
 systemctl set-default multi-user.target
 
+###########################################
 
 To change back to booting to the GUI,
 
