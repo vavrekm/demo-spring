@@ -18,3 +18,13 @@ sudo uvcdynctrl -i /usr/share/uvcdynctrl/data/046d/logitech.xml
 uvcdynctrl -s 'LED1 Mode' 0
 
 ###########################################
+
+Terminal font size:
+setfont /usr/share/consolefonts/Lat15-TerminusBold20x10.psf.gz
+
+
+Disable terminal blank:
+setterm -blank 0
+cat /sys/module/kernel/parameters/consoleblank
+
+
